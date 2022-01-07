@@ -1,0 +1,313 @@
+<!DOCTYPEhtml>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+		<link rel="stylesheet" href="app.component.css">
+		 <form action="Database.php" method="POST">
+	</head>
+	
+	<body>
+		<header >    
+		<div class="sidebar-menu">
+      <ul>
+        <li>
+          <a href="Home.html" class="active"><span class="fa fa-home"></span><span>Home</span></a>
+        </li>
+		<li>
+          <a href="Dashboard.html" class="active"><span class="fa fa-Dashboard"></span><span>Dashboard</span></a>
+        </li>
+        <li>
+          <a href="Taches.html"><span class="fa fa-tasks"></span><span>Taches</span></a>
+        </li>
+        <li>
+          <a href="Add Employe.html"><span class="fa fa-th-large"></span><span>Add Employe</span></a>
+        </li>
+        <li>
+          <a href="conges demandes.html"><span class="fa fa-line-chart"></span>conges demandes<span></span></a>
+        </li>
+       
+        <li>
+          <a href="htmlconge."><span class="fa fa-clipboard"></span><span>conge</span></a>
+        </li>
+        <li>
+          <a href="employers archives.html"><span class="fa fa-money"></span><span>employers archives</span></a>
+        </li>
+		 <li>
+          <a href="intern.html"><span class="fa fa-money"></span><span>intern</span></a>
+        </li>
+        <li>
+          <a href="reunion.html"><span class="fa fa-registered"></span><span>reunion</span></a>
+        </li>
+          <li>
+          <a href="RM.html"><span class="fa fa-registered"></span><span>RM</span></a>
+        </li>
+        <li>
+          <a href="Contacts.html"><span class="fa fa-user"></span><span>Contacts</span></a>
+        </li>
+      </ul>
+  </div>		
+				
+			</div>
+			
+ 
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+
+
+</head>
+
+<body ng-app=" Management Ressources" >
+<script type="text/javascript" src="../node_modules/angular/angular.min.ts"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.ts"></script>
+<script type="text/javascript" src="../ts/app.ts"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.ts" ></script>
+
+ <html>
+<head>
+<title>Hello AngularJS</title>
+ 
+</head>
+
+<body ng-app="Gestion des ressources" >
+
+	<h2 class="auth-form-header"> Se connecter </h2>
+	<div _ngcontent-yii-c81="" class="flex flex-row auth-providers-list flex-justify-center">
+	<div _ngcontent-yii-c81="" class="options-separator"><div _ngcontent-yii-c81="" class="options-separator-line"></div>
+	<form novalidate="" name="signInForm" class="sign-in-form ng-dirty ng-valid ng-touched">
+	<input type="hidden" name="XSRF_TOKEN" formcontrolname="XSRF_TOKEN" value="0796b8af-0c4b-4f70-9a59-513b8b3b561d" class="ng-untouched ng-pristine ng-valid">
+	<div class="margin--bottom--l"><label for="email" class="cp-form-label">E-mail</label>
+	<input type="email" name="email" id="email" formcontrolname="email" autofocus="autofocus" data-test="sign-in-email-input" class="cp-form-element cp-form-element--block ng-dirty ng-valid ng-touched"><cp-validation-summary _nghost-yii-c83=""><ul _ngcontent-yii-c83="" data-test="validation-summary" aria-live="assertive" aria-relevant="additions removals" class="validation-summary"><!----></ul></cp-validation-summary></div><div class="margin--bottom--l"><label for="password" class="cp-form-label">Mot de passe</label>
+	<input type="password" name="password" id="password" formcontrolname="password" data-test="sign-in-password-input" class="cp-form-element cp-form-element--block ng-dirty ng-valid ng-touched"><cp-validation-summary _nghost-yii-c83=""><ul _ngcontent-yii-c83="" data-test="validation-summary" aria-live="assertive" aria-relevant="additions removals" class="validation-summary"><!----></ul></cp-validation-summary></div><!----><div class="flex flex-column flex-align-center"><button type="submit" name="formSubmitBtn" data-test="sign-in-submit-btn" class="cp-button cp-button--primary button--block"> Se connecter </button></div></form></div></cp-sign-in-form><div class="flex flex-column flex-align-center"><div class="flex flex-column flex-align-center margin--top--xl">
+	<section>
+   <aside>
+	<p><a queryparamshandling="merge" data-test="sign-up-link" class="font--medium" href="/public/sign-up"> Commencez maintenant </a><a queryparamshandling="merge" data-test="forgotten-password-link" class="font--medium margin--vertical" href="/public/forgotten-password"></p> 
+	<p>Réinitialiser le mot de passe </a></div></div></div><!----></div></p>
+	</section>
+	</aside>
+</form>
+	 
+</body>
+</html>
+<Script>
+// App
+var App =angular/core.createClass({ 
+  
+  getInitialState: function() {
+    return {
+      comments: {}
+    }
+  },
+  
+  addComment: function(commentData){
+    
+    var timeStamp = (new Date()).getTime();
+    
+    this.state.comments['comment-id'+ timeStamp] = commentData;
+    
+    this.setState({
+      comments: this.state.comments
+    });
+    console.log(commentData);
+  },
+  
+  editComment: function(commentID, editedData){
+    
+    this.state.comments[commentID].commentBody = editedData;
+    this.setState({
+      comments: this.state.comments
+    });
+    
+    console.log("Edited text:",editedData);
+    
+  },
+  
+  deleteComment: function(commentID){
+
+    delete this.state.comments[commentID];
+    
+    this.setState({
+      comments: this.state.comments
+    });
+    
+  },
+  
+  renderComment: function(key){
+    return (
+       <li className="">
+        <NewComment key={key} index={key} details={this.state.comments[key]} editComment={this.editComment} deleteComment={this.deleteComment}/>
+      </li>
+    )
+  },
+  
+  render : function() {
+    return (
+	    <div className="row medium-8 large-7 columns">
+	      <ol className="comment-list block-comments">
+            {
+              Object
+                .keys(this.state.comments)
+                 // Creating a NEW array
+                .map(this.renderComment)
+            }
+	      </ol>
+	      <AddCommentForm addComment={this.addComment}/>
+        
+        <pre>{JSON.stringify(this.state, null, 2)}</pre>
+        
+	    </div>
+    )
+  }
+});
+
+/*
+  Add comment Form
+  <AddCommentForm />
+*/
+var AddCommentForm = React.createClass({
+  
+  processComment: function(event){
+    event.preventDefault();
+
+    // 1. Take data from form
+    var commentData = {
+      commentName: this.refs.name.value,
+      commentBody: this.refs.desc.value
+    }
+
+    // 2. Pass data back to App
+    this.props.addComment(commentData);
+    
+    // 3. Reset the form
+    this.refs.commentForm.reset();
+    
+  },
+  
+  render : function() {
+    return (
+      <div className="callout secondary">
+        <h4 className="leave-comment">Add a Comment</h4>
+        <form className="post-edit" ref="commentForm" onSubmit={this.processComment}>
+          <input type="text" ref="name" placeholder="Your Name" required/>
+          <textarea ref="desc" placeholder="Add your comment here" required/>
+          <button id="submit" type="submit" className="button button-outline comment-button action-button expand-right">Add Comment</button>
+        </form>
+      </div>
+    )
+  }
+});
+
+/*
+  Newcomment
+  <NewComment />
+*/
+var NewComment = React.createClass({
+  
+  getInitialState: function() {
+    return {
+      editMode: false
+    }
+  },
+  
+  renderCommentRead: function(){
+   return (
+     <div className="comment-text">
+          <p>{this.props.details.commentBody}</p>
+     </div>
+   ) 
+  },
+  
+  editCommentHandler: function(event){
+    event.preventDefault();
+    
+    this.props.editComment(this.props.index, this.refs.editText.value);
+        
+    this.setState({
+      editMode: false
+    });
+    
+  },
+  
+  deleteCommentHandler: function(){
+    
+    this.props.deleteComment(this.props.index);
+    
+  },
+  
+  renderCommentEdit: function(){
+   return (
+     <form className="post-edit" ref="commentForm" onSubmit={this.editCommentHandler}>
+       <textarea ref="editText" required>{this.props.details.commentBody}</textarea>
+       <button id="submit" type="submit" className="button button-outline comment-button action-button expand-right">Done</button>
+     </form>
+   ) 
+  },
+  
+  enterEditMode: function(){
+    if (!this.state.editMode){
+      this.setState({
+        editMode: true
+      });
+    }
+  },
+  
+  render : function() {
+    return (
+      <div className="block-comment-content module text">
+        <div className="comment-user">
+          <div className="comment-user-avatar-wrap">
+            
+          </div>
+          <div className="comment-user-text">
+            <a href="#0" data-username="cathbailh" className="comment-username">
+                <span className="username">
+                  {this.props.details.commentName}
+                </span>
+            </a>
+            <span className="on"> on </span>
+            <a href="#0">
+              <time className="block-comment-time">
+                {h.getTime()}
+              </time>
+            </a>
+            <span className="edit-comment">
+              <i className="fa fa-pencil edit-btn" aria-hidden="true" onClick={this.enterEditMode}></i>
+              <i className="fa fa-trash-o del-btn" aria-hidden="true" onClick={this.deleteCommentHandler}></i>
+            </span>
+          </div>
+        </div>
+        { this.state.editMode ? this.renderCommentEdit() : this.renderCommentRead() }
+      </div>
+      
+    )
+  }
+});
+
+ReactDOM.render(<App />, document.querySelector("#main"));
+
+			 
+</script>
+				
+<?php
+
+mysql_connect("localhost", "root" ); // Connexion à MySQL
+mysql_select_db("bdd" ); // Sélection de la base coursphp
+
+$nom = $_POST['nom'];
+
+$sql = 'INSERT INTO `Informations` (nom) VALUES ("'.$_POST['nom']."')';
+$result=mysql_query($query) or die ("l'insertion des données est impossible" );
+
+
+mysql_close(); // Déconnexion de MySQL
+?>
+       
+               
+
+      
