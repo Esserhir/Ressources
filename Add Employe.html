@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Employe</title>
+        <meta charset="utf-8" />
+		<link rel="stylesheet" href="app.component.css">
+		 <form action="Database.php" method="POST">
+    </head>
+    <body>
+        
+   <script language="Html">
+        </script>
+		 <div class="sidebar-menu">
+      <ul>
+	  <li>
+          <a href="Dashboard.html" class="active"><span class="fa fa-Dashboard"></span><span>Dashboard</span></a>
+        </li>
+        <li>
+          <a href="Home.html" class="active"><span class="fa fa-home"></span><span>Home</span></a>
+        </li>
+        <li>
+          <a href="Taches.html"><span class="fa fa-tasks"></span><span>Taches</span></a>
+        </li>
+        <li>
+          <a href="Add Employe.html"><span class="fa fa-th-large"></span><span>Add Employe</span></a>
+        </li>
+        <li>
+          <a href="conges demandes.html"><span class="fa fa-line-chart"></span>conges demandes<span></span></a>
+        </li>
+       
+        <li>
+          <a href="htmlconge."><span class="fa fa-clipboard"></span><span>conge</span></a>
+        </li>
+        <li>
+          <a href="employers archives.html"><span class="fa fa-money"></span><span>employers archives</span></a>
+        </li>
+		 <li>
+          <a href="intern.html"><span class="fa fa-money"></span><span>intern</span></a>
+        </li>
+        <li>
+          <a href="reunion.html"><span class="fa fa-registered"></span><span>reunion</span></a>
+        </li>
+          <li>
+          <a href="RM.html"><span class="fa fa-registered"></span><span>RM</span></a>
+        </li>
+        <li>
+          <a href="Contacts.html"><span class="fa fa-user"></span><span>Contacts</span></a>
+        </li>
+      </ul>
+  </div>		
+      
+  <form action="recoit_post.php" method="POST" name="formulaire"> 
+<link rel="stylesheet" href="../css/style.css">
+ <script type="text/javascript" src="../node_modules/angular/angular.min.ts"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.ts"></script>
+<script type="text/javascript" src="../ts/app.ts"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.ts" ></script>
+	
+		<section>
+		 <aside>
+		  <h1>A propos du Formulaire d'Employe</h1>
+		  <p>Id-admin:<input type="text" name="Id-admin" /><br /> 
+              Prénom: <input type="text" name="prenom" /><br /> 
+               Nom: <input type="text" name="nom" /><br /> </p>
+			   <p>E-mail:<input type="text" name="E-mail" /><br /> 
+			   <p>Telephone:<input type="text" name="Telephone" /><br /> 
+			   <div class="form-group row m-b-10">
+												<label class="col-md-3 text-md-right col-form-label">Sexe</label>
+												<div class="col-md-6">
+														<select class="form-control form-control-lg">
+																<option value="ambassadeur">Masculin</option>
+																<option value="ambassadeur">Féminin</option>
+																
+														</select>
+													
+												</div>
+			 <h2>ville</h2>
+			 <p><input type="radio" name="ville"=id="ville /><br /> </p>
+			 <label for="ville">Cergy</label>
+			  <p><input type="radio" name="ville"=id="ville /><br /> </p>
+			 <label for="ville">Dugny</label>
+			  <p><input type="radio" name="ville"=id="ville /><br /> </p>
+			 <label for="ville">Rabat</label>
+			  <p><input type="radio" name="ville"=id="ville /><br /> </p>
+			 <label for="ville">Annecy</label>
+			 <h2>Residence</h2>
+			  <p><input type="text" name="Residence =id="Residence /><br /> </p>
+			 <h3> code postal</h3>
+			 <p><input type ="Number" value="code postal"/><br/></p>
+           
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+												<label class="col-md-3 text-md-right col-form-label">Date de naissance</label>
+												<div class="col-md-6">
+													<div class="row row-space-6">
+														<div class="col-4">
+															<select class="form-control" name="year">
+																<option>-- Année --</option>
+															</select>
+														</div>
+														<div class="col-4">
+															<select class="form-control" name="month">
+																<option>-- Mois --</option>
+															</select>
+														</div>
+														<div class="col-4">
+															<select class="form-control" name="day">
+																<option>-- Jour --</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											
+											<div class="form-group row m-b-10">
+													<label class="col-md-3 text-md-right col-form-label">Lieu de naissance</label>
+													<div class="col-md-6">
+														<input type="text" name="lastname" placeholder="Lieu de naissance" class="form-control" />
+													</div>
+											</div>
+		   
+		   <h4> Documents</h4>
+     <p><input type="radio" name="passeport"=id="passeport/><br /></p> 
+	  <labelfor="passeport">passeport</label>
+	  <p><input type="radio" name="CIN"=id="CIN/><br /></p> 
+		<labelfor="CIN">CIN</label>	 
+		    </aside>
+		  </section>
+		  <div class="form-group row m-b-10">
+												<label class="col-md-3 text-md-right col-form-label">Situation familiale</label>
+												<div class="col-md-6">
+														<select class="form-control form-control-lg">
+																<option value="ambassadeur">Marié(e)</option>
+																<option value="ambassadeur">celibataire</option>
+																<option value="ambassadeur">Veuve</option>
+																<option value="ambassadeur">Divorcé(e)</option>
+																
+														</select>
+													
+												</div>
+	<div class="form-group row m-b-10">
+												<label class="col-md-3 text-md-right col-form-label">Position</label>
+												<div class="col-md-6">
+														<select class="form-control form-control-lg">
+																<option value="ambassadeur">Activité</option>
+																<option value="ambassadeur">Radié</option>
+																
+														</select>
+													
+												</div>
+		  
+		  <footer>
+		  <p><a href="#">"envoyer" </a></p> 
+		
+		
+</body>		
+</html>
+
+				
+
